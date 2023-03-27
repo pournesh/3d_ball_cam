@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         forward = transform.forward * speed * Time.fixedDeltaTime;
-        hor = transform.right * x * speed * turn_speed* Time.fixedDeltaTime;
+        hor = transform.right * x * speed * Time.fixedDeltaTime *turn_speed;
 
         rb.MovePosition(rb.position + forward+hor);
         /*
